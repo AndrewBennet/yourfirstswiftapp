@@ -131,10 +131,10 @@ class TimerListTableViewController: UITableViewController {
         }
         print("Finished updating model")
 
-        userReorderingCells = false
-        
         print("Saving managed object context.")
         appDelegate().coreDataStack.save()
+        
+        userReorderingCells = false
     }
 
     override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
